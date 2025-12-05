@@ -1,0 +1,50 @@
+# ============================
+# Django / Python
+# ============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.log
+*.pot
+*.pyc
+
+# Entorno virtual
+env/
+venv/
+ENV/
+.venv/
+
+# Archivos de migraciones compiladas
+*/migrations/*__pycache__/
+
+# Base de datos local (si usas SQLite local)
+db.sqlite3
+
+# Archivos sensibles
+.env
+*.env
+secret.key
+my.cnf
+my.cnf.local
+
+# Configuración de IDEs
+.vscode/
+.idea/
+
+# Archivos temporales
+*.temp
+*.tmp
+
+# Archivos estáticos generados
+staticfiles/
+static/
+
+# Archivos de caché de Django
+django_cache/
+
+# ============================
+# Otros
+# ============================
+.DS_Store
+Thumbs.db
