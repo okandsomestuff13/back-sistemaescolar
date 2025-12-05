@@ -1,7 +1,9 @@
 import os
 import dj_database_url
+from dotenv import load_dotenv
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 # SECURITY WARNING: Mantén la clave secreta en variables de entorno en producción
 # En desarrollo se usará una clave por defecto, pero en producción DEBE configurarse
@@ -11,7 +13,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-only-secret-key-change-in-product
 DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 
 # Hosts permitidos
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+default_hosts = "localhost,127.0.0.1"
+env_hosts = os.environ.get("ALLOWED_HOSTS", default_hosts)
+ALLOWED_HOSTS = [h.strip() for h in env_hosts.split(",") if h.strip()]
 
 # Agregar el host de Render en producción
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')

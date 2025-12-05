@@ -12,8 +12,8 @@ from dev_sistema_escolar_api.views import eventos
 
 
 urlpatterns = [
-    #Create Admin
-        path('admin/', users.AdminView.as_view()),
+        #Admin Data
+        path('admin/', admin.site.urls),
     #Admin Data
         path('lista-admins/', users.AdminAll.as_view()),
     #Edit Admin
