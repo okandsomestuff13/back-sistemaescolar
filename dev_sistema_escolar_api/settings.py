@@ -45,7 +45,7 @@ MIDDLEWARE = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:4200',
+    'front-sistemaescolar-732cc1wm0-dayra-diazs-projects.vercel.app',
 ]
 
 # checar esto por el dominio
