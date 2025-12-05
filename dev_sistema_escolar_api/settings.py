@@ -49,7 +49,7 @@ MIDDLEWARE = [
 
 
 CORS_ALLOWED_ORIGINS = [
-    'front-sistemaescolar.vercel.app',
+    'https://front-sistemaescolar.vercel.app',
 ]
 
 # checar esto por el dominio
